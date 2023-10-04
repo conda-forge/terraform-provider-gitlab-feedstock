@@ -1,7 +1,7 @@
 {% set provider = "GitLab" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
 {% set goname = "gitlab.com/gitlab-org/terraform-provider-gitlab" %}
-{% set version = "3.20.0" %}
+{% set version = "15.11.0" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://{{ goname }}/-/archive/v{{ version }}.tar.gz
-  sha256: b5f4d1322ee3fa8b11a7ad8990c3d89ac33292cda3000724cf341608d1e602c1
+  sha256: 4cedffd2b97dce4a0d8c9df277e71a8ee173c077dd9c4bcd153330dd999b593a
 
 
 build:
