@@ -9,7 +9,7 @@ Package license: MPL-2.0
 
 Summary: The Terraform GitLab provider
 
-Development: https://github.com/terraform-providers/terraform-provider-gitlab
+Development: https://gitlab.com/gitlab-org/terraform-provider-gitlab
 
 Documentation: https://www.terraform.io/docs/providers/gitlab/index.html
 
