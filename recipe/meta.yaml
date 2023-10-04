@@ -1,6 +1,7 @@
 {% set provider = "GitLab" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "2.11.0" %}
+{% set goname = "gitlab.com/gitlab-org/terraform-provider-gitlab" %}
+{% set version = "3.20.0" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -12,7 +13,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://{{ goname }}/archive/v{{ version }}.tar.gz
+  url: https://{{ goname }}/-/archive/v{{ version }}.tar.gz
   sha256: "977ee51bae516fb26c5b720c3898f4985347e76f25b1ec8af003082139289f75"
 
 
@@ -23,7 +24,9 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }} 1.13
+    - {{ compiler('go') }} 1.19
+  run:
+    - terraform 0.12
 
 test:
   requires:
